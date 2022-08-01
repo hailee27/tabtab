@@ -1,0 +1,84 @@
+@import "../GlobalStyles/GlobalStyles.scss";
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #ccc;
+  width: 100%;
+}
+.container {
+  max-width: 100%;
+  width: 1280px;
+  height: 100%;
+  display: flex;
+  @include mobile {
+    flex-direction: column;
+  }
+}
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  @include mobile {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
+    cursor: pointer;
+    display: flex;
+    width: 220px;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 150px;
+      height: 100px;
+    }
+    .text {
+      color: tomato;
+      font-weight: 800;
+    }
+  }
+  .contact {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+}
+.btnStart {
+  width: 220px;
+  height: 30px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #e1677e;
+}
+h3 {
+  margin: 0;
+  text-decoration: underline;
+}
+i {
+  font-size: 24px;
+}
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    .flag {
+      width: 150px;
+      img {
+        width: 100%;
+      }
+    }
+    li {
+      cursor: pointer;
+      list-style: none;
+    }
+  }
+}

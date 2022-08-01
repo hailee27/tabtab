@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Macondo&display=swap");
+@import "../GlobalStyles/GlobalStyles.scss";
+.wrapper {
+  position: -webkit-sticky;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+  background: #fff;
+  @include mobile {
+    width: 100%;
+  }
+}
+.content {
+  max-width: 100%;
+  width: 1280px;
+  display: flex;
+}
+.left {
+  flex: 2;
+  align-items: center;
+  display: flex;
+  position: relative;
+  .logo {
+    cursor: pointer;
+  }
+  .title {
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: 600;
+    top: 36px;
+    left: 42px;
+    font-family: "Macondo", cursive;
+    color: #f19cbb;
+  }
+}
+.center {
+  flex: 6;
+  display: flex;
+  align-items: center;
+  .list {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    li {
+      list-style: none;
+      font-weight: 500;
+      font-size: 1.6rem;
+      cursor: pointer;
+      &:hover {
+        border-bottom: 2px solid #f75959;
+      }
+    }
+  }
+  @include mobile {
+    display: none;
+  }
+}
+.right {
+  flex: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  @include mobile {
+    flex: 1;
+  }
+
+  .login {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 2.1rem;
+    &:hover {
+      border-bottom: 2px solid #f75959;
+    }
+  }
+  .btnSignUp {
+    cursor: pointer;
+    width: 150px;
+    height: 42px;
+    background: linear-gradient(135deg, #f75959 0%, #f35587 100%);
+    border: none;
+    border-radius: 50px;
+    font-size: 1.6rem;
+    color: #fff;
+  }
+  .setting {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50px;
+    background: rgba(241, 156, 187, 0.8);
+    border: 2px solid #3578e5;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+    &:hover {
+      width: 160px;
+    }
+    .avatar {
+      display: inline-block;
+      float: left;
+      top: 0;
+      text-align: center;
+      object-fit: cover;
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      &:hover {
+        border: 1px solid #3578e5;
+      }
+    }
+    .name {
+      display: flex;
+      align-items: center;
+      padding-left: 12px;
+      height: 50px;
+      font-weight: 600;
+      color: #fff;
+    }
+  }
+}

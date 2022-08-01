@@ -1,0 +1,65 @@
+@import "../GlobalStyles/GlobalStyles.scss";
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  @include mobile {
+    .line {
+      height: 100px;
+    }
+    .searchInput {
+      width: 80%;
+      height: 50px;
+      input {
+        width: 130px;
+        font-size: 1.5rem;
+      }
+      img {
+        width: 60px;
+      }
+      span {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+.line {
+  height: 120px;
+  width: 0px;
+  border-width: 0px 0px 0px 2px;
+  border-top-style: initial;
+  border-right-style: initial;
+  border-bottom-style: initial;
+  border-top-color: initial;
+  border-right-color: initial;
+  border-bottom-color: initial;
+  border-image: initial;
+  margin: 0px auto;
+  border-left-style: dashed;
+  border-left-color: rgb(117, 81, 233);
+}
+.searchInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 578px;
+  height: 80px;
+  border-radius: 30px;
+  font-size: 2.6rem;
+  border: 1px solid #f35587;
+  background: #fff;
+  input {
+    padding: 0px 16px 0px 0px;
+    border: none;
+    &:focus {
+      outline: none;
+    }
+  }
+  span {
+    font-weight: 600;
+  }
+  img {
+    width: 80px;
+  }
+}

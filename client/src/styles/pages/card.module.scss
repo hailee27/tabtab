@@ -1,0 +1,280 @@
+@import "../GlobalStyles/GlobalStyles.scss";
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+  height: 100%;
+  @include mobile {
+    overflow-x: hidden;
+  }
+}
+.top {
+  flex: 1;
+}
+.bottom {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 32px;
+  @include mobile {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  input {
+    width: 400px;
+    height: 20px;
+    font-weight: 500;
+    font-size: 2.6rem;
+    padding: 16px;
+    border-radius: 10px;
+    border: 2px solid #f35587;
+    @include mobile {
+      width: 90%;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.wrapperCard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  margin-top: 24px;
+  padding-top: 50px;
+  background: rgba(241, 156, 187, 0.4);
+  @include mobile {
+    margin-top: 70px;
+    padding-top: 20px;
+  }
+}
+.card {
+  position: relative;
+  display: flex;
+  img {
+    object-fit: cover;
+    width: 960px;
+    height: 560px;
+    border-radius: 30px;
+    @include mobile {
+      width: 400px;
+      height: 230px;
+    }
+  }
+}
+.content {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  @include mobile {
+    padding-top: 12px;
+  }
+  .avatar {
+    margin-left: 100px;
+    width: 200px;
+    height: 195px;
+    @include mobile {
+      width: 85px;
+      height: 82px;
+      margin-left: 50px;
+    }
+    img {
+      object-fit: cover;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      border: 3px solid #fff;
+    }
+  }
+  .qrCode {
+    padding: 12px;
+    height: 150px;
+    width: 150px;
+    background-color: white;
+    margin-right: 60px;
+    @include mobile {
+      height: 70px;
+      width: 70px;
+      padding: 6px;
+      margin-right: 40px;
+    }
+  }
+  .name {
+    display: flex;
+    font-family: "Roboto", sans-serif;
+    text-transform: capitalize;
+    -webkit-text-stroke: 2px #000;
+    align-items: center;
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    font-weight: 900;
+    font-size: 6.8rem;
+    margin: 0 0 0 50px;
+  }
+}
+.listImage {
+  height: 560px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  @include mobile {
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    padding: 24px 0;
+    overflow-x: scroll;
+    justify-content: flex-start;
+  }
+  .itemImage {
+    opacity: 0.7;
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    object-fit: cover;
+    width: 250px;
+    height: 130px;
+    @include mobile {
+      width: 150px;
+      height: 100px;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+.btnPDF {
+  box-shadow: 20px 38px 34px -26px hsla(0, 0%, 0%, 0.2);
+  border: 1px solid #fff;
+  width: 150px;
+  height: 50px;
+  background: linear-gradient(100deg, #f2994a 30%, #f2c94c 100%);
+  color: #fff;
+  font-size: 2.6rem;
+  font-weight: 500;
+  border-radius: 10px;
+  margin-right: 400px;
+  @include mobile {
+    margin: 0;
+    width: 80px;
+    height: 40px;
+    font-size: 2rem;
+  }
+  &:hover {
+    box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
+  }
+}
+.wrapperBottom {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  @include mobile {
+    gap: 12px;
+    width: 96%;
+    padding-bottom: 24px;
+    h2,
+    h1 {
+      padding-left: 12px;
+      font-size: 1.6rem;
+    }
+  }
+  label {
+    box-shadow: 20px 38px 34px -26px hsla(0, 0%, 0%, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 2px dashed #fff;
+    @include mobile {
+      width: 60px;
+      height: 40px;
+    }
+    &:hover {
+      box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
+    }
+    i {
+      padding: 8px 24px;
+      font-size: 34px;
+      color: teal;
+    }
+  }
+}
+.editCard {
+  display: flex;
+  flex-direction: column;
+  .text {
+    padding: 12px;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .avatar {
+    i {
+      padding: 8px;
+      color: teal;
+      border-radius: 50%;
+      border: 2px dashed teal;
+      font-size: 34px;
+      box-shadow: 20px 38px 34px -26px hsla(0, 0%, 0%, 0.6);
+      &:hover {
+        box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
+      }
+    }
+  }
+  .wrapperLabel {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+.editName {
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: center;
+  }
+  span {
+    padding-right: 40px;
+    font-size: 2rem;
+    font-weight: 500;
+    @include mobile {
+      padding: 12px;
+    }
+  }
+  .changeSize {
+    padding-top: 12px;
+    i {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      color: #f35587;
+      margin-left: 12px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+  }
+}

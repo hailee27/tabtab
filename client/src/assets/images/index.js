@@ -1,0 +1,22 @@
+const images = {
+  logo: require("@/assets/images/ppg.png"),
+  logoPPG: require("@/assets/images/logo.png"),
+  logoBg: require("@/assets/images/logoBg.png"),
+  flag: require("@/assets/images/vietnam.png"),
+  user: require("@/assets/images/user.png"),
+  imgBg: require("@/assets/images/imgBg.jpg"),
+  bg: require("@/assets/images/bg-img.png"),
+  tutorial: require("@/assets/images/tutorial.png"),
+  noImage: require("@/assets/images/noImage.gif"),
+  image1: require("@/assets/images/1.jpg"),
+  image2: require("@/assets/images/2.jpg"),
+  image3: require("@/assets/images/3.jpg"),
+  image5: require("@/assets/images/5.jpg"),
+  fb: require("@/assets/images/fb.png"),
+  ig: require("@/assets/images/ig.png"),
+  tiktok: require("@/assets/images/tiktok.png"),
+  youtube: require("@/assets/images/youtube.png"),
+  gif1: require("@/assets/images/gif1.gif"),
+  error: require("@/assets/images/error.jpg"),
+};
+export default images;

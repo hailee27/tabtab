@@ -1,0 +1,120 @@
+@import "../GlobalStyles/GlobalStyles.scss";
+.wrapper {
+  height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container {
+  width: 1000px;
+  height: 500px;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px 0px;
+  @include mobile {
+    width: 390px;
+    .right {
+      display: none;
+    }
+  }
+}
+.left {
+  flex: 1;
+  background: #f5f6f8;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  .content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 8px;
+  }
+}
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  .icon {
+    i {
+      cursor: pointer;
+      font-size: 24px;
+      padding: 4px;
+    }
+  }
+}
+.formLogin {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 400px;
+  height: 250px;
+  @include mobile {
+    width: 350px;
+  }
+  input {
+    border: 1px solid #f35587;
+    height: 60px;
+    padding: 0 24px 0 24px;
+    background-color: #f5f6f8;
+    border-radius: 30px;
+    &:focus {
+      outline: 1px solid #f75959;
+    }
+  }
+  span {
+    padding: 12px;
+    font-weight: 500;
+  }
+  button {
+    margin-top: 20px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    background: linear-gradient(135deg, #f75959 0%, #f35587 100%);
+  }
+}
+.forgot {
+  cursor: pointer;
+  margin: 24px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: linear-gradient(135deg, #f75959 0%, #f35587 100%);
+  .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    h1 {
+      color: #fff;
+      margin-bottom: 0;
+    }
+    h4 {
+      margin-top: 0;
+      color: #fff;
+    }
+    button {
+      width: 100px;
+      height: 50px;
+      border-radius: 30px;
+      color: #fff;
+      background: linear-gradient(135deg, #f75959 0%, #f35587 100%);
+      border: 2px solid #fff;
+    }
+  }
+}

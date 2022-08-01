@@ -1,0 +1,86 @@
+@import "../GlobalStyles/GlobalStyles.scss";
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  @include mobile {
+    .right {
+      h1 {
+        font-size: 2.2rem;
+      }
+      p {
+        font-size: 1.7rem;
+      }
+    }
+    .left {
+      padding-left: 12px;
+      h1 {
+        font-size: 2.2rem;
+      }
+      p {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+.video {
+  display: flex;
+  align-items: center;
+  margin-top: 120px;
+  @include mobile {
+    img {
+      width: 200px;
+      height: 250px;
+    }
+    video {
+      width: 200px;
+      height: 250px;
+    }
+  }
+}
+.left {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  h1 {
+    font-size: 3.6rem;
+  }
+  p {
+    width: 95%;
+    font-size: 1.8rem;
+  }
+  span {
+    width: 200px;
+    height: 50px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 110px;
+    right: 168px;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    @include mobile {
+      width: 120px;
+      height: 25px;
+      font-size: 1.2rem;
+      line-height: 25px;
+      bottom: 64px;
+      right: 55px;
+    }
+  }
+}
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  h1 {
+    font-size: 3.6rem;
+  }
+  p {
+    font-size: 1.8rem;
+  }
+}

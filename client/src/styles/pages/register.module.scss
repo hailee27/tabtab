@@ -1,0 +1,33 @@
+@import "../GlobalStyles/GlobalStyles.scss";
+.formRegister {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 350px;
+  @include mobile {
+    width: 350px;
+  }
+  input {
+    height: 60px;
+    padding: 0 24px 0 24px;
+    background-color: #f5f6f8;
+    border-radius: 30px;
+    border: 1px solid #f75959;
+    &:focus {
+      outline: 1px solid #f75959;
+    }
+  }
+  span {
+    padding: 12px;
+    font-weight: 500;
+  }
+  button {
+    margin-top: 20px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    background: linear-gradient(135deg, #f75959 0%, #f35587 100%);
+  }
+}
