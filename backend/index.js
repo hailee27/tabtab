@@ -31,6 +31,6 @@ app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/card", cardRoute);
 
-app.listen(process.env.PORT || 4000, () => {
+app.listen(4000, () => {
   console.log("backend server is running!");
 });
