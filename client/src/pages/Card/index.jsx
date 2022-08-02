@@ -74,6 +74,15 @@ export default function Card() {
           checked={checked}
         />
       </div>
+      <h4 style={{ margin: 0 }}>
+        Your Link:{" "}
+        <a
+          href={`https://tabtab.link/${name}`}
+          style={{ color: "#8631da", textDecoration: "underLine" }}
+        >
+          https://tabtab.link/{name}
+        </a>
+      </h4>
       <div className={styles.bottom}>
         <div className={styles.editCard}>
           <span className={styles.text}>Chọn avatar từ thiết bị của bạn</span>
