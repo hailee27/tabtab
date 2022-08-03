@@ -22,10 +22,11 @@ const socials = [
   },
   {
     id: 4,
-    title: "Youtube",
-    url: "youyu.be/",
+    title: "Call me",
+    isPhone: true,
+    url: "tel: ",
     thumbnail:
-      "https://seeklogo.com/images/Y/youtube-square-logo-3F9D037665-seeklogo.com.png",
+      "https://img1.pnghut.com/t/23/0/1/y0wLpFe9JY/mobile-phones-symbol-metro-telephone-call-text.jpg",
   },
 ];
 export default socials;

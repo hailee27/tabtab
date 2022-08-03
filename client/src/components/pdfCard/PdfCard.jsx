@@ -24,11 +24,6 @@ export default function PdfCard({ file, name, editName, size, checked }) {
       pdf.addImage(imgData, "PNG", 5, 10, 98, 60);
       pdf.setLineDash([1, 1], 10);
       pdf.line(0, 75, 560, 75);
-      // pdf.text(
-      //   "Nếu như ảnh avatar bị co lại thì hãy sửa lại ảnh với kích thước 500x500px",
-      //   10,
-      //   85
-      // );
       pdf.addImage(images.tutorial, "PNG", 5, 80, 200, 220);
       pdf.save("File.pdf");
     });
@@ -37,34 +32,28 @@ export default function PdfCard({ file, name, editName, size, checked }) {
     setFileImageCover(null);
     setCoverImage(image);
   };
-  console.log(link);
   return (
     <div className={styles.wrapperCard}>
       <div className={styles.card} ref={input}>
-        {fileImageCover ? (
-          <img src={URL.createObjectURL(fileImageCover)} alt="" />
-        ) : (
-          <img src={coverImage} alt="" />
-        )}
+        {
+          <img
+            src={
+              fileImageCover ? URL.createObjectURL(fileImageCover) : coverImage
+            }
+            alt=""
+          />
+        }
 
         <div className={styles.content}>
-          {file ? (
+          {
             <div className={styles.avatar}>
               <img
                 style={{ display: checked ? "none" : "" }}
-                src={URL.createObjectURL(file)}
+                src={file ? URL.createObjectURL(file) : images.logoPPG}
                 alt=""
               />
             </div>
-          ) : (
-            <div className={styles.avatar}>
-              <img
-                style={{ display: checked ? "none" : "" }}
-                src={images.logoPPG}
-                alt=""
-              />
-            </div>
-          )}
+          }
 
           {width >= 800 ? (
             <div className={styles.qrCode}>

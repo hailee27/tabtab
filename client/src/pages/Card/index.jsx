@@ -4,6 +4,7 @@ import { styled } from "@mui/material/styles";
 import { useSelector } from "react-redux";
 import PdfCard from "@/components/pdfCard/PdfCard";
 import Switch from "@mui/material/Switch";
+import { Link } from "react-router-dom";
 
 const IOSSwitch = styled((props) => (
   <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
@@ -75,13 +76,13 @@ export default function Card() {
         />
       </div>
       <h4 style={{ margin: 0 }}>
-        Your Link:{" "}
-        <a
-          href={`https://tabtab.link/${name}`}
+        Your Link:
+        <Link
+          to={`/${name}`}
           style={{ color: "#8631da", textDecoration: "underLine" }}
         >
           https://tabtab.link/{name}
-        </a>
+        </Link>
       </h4>
       <div className={styles.bottom}>
         <div className={styles.editCard}>

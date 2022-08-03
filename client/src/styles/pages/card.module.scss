@@ -124,7 +124,10 @@
     height: 50px;
     font-weight: 900;
     font-size: 6.8rem;
-    margin: 0 0 0 50px;
+    margin: 0 0 0 100px;
+    @include mobile {
+      margin: 0 0 0 50px;
+    }
   }
 }
 .listImage {

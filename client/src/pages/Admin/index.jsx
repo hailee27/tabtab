@@ -6,7 +6,6 @@ import useWindowDimensions from "@/hook/useWindowDimensions";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState, Suspense } from "react";
 import { deleteCard, getCard, updateCard } from "@/redux/api";
-import { Backdrop, CircularProgress } from "@mui/material";
 import { storage } from "@/firebase";
 import {
   ref,
@@ -14,6 +13,7 @@ import {
   getDownloadURL,
   deleteObject,
 } from "firebase/storage";
+import { Backdrop, CircularProgress } from "@mui/material";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import EditIcon from "@mui/icons-material/Edit";
 import Tooltip from "@mui/material/Tooltip";

@@ -60,16 +60,19 @@ export default function NewCard() {
     setFile(() => "");
     formRef.current.reset();
   };
-  const handleSelect = (title, thumbnail) => {
+  const handleSelect = (title, thumbnail, url) => {
     setFile(() => "");
+
     setData((prev) => {
       return {
         ...prev,
         title,
         thumbnail,
+        url,
       };
     });
   };
+  console.log(data);
 
   return (
     <div className={styles.edit}>
@@ -87,7 +90,9 @@ export default function NewCard() {
               className={styles.socialImg}
               src={social.thumbnail}
               alt=""
-              onClick={() => handleSelect(social.title, social.thumbnail)}
+              onClick={() =>
+                handleSelect(social.title, social.thumbnail, social.url)
+              }
             />
           ))}
         </div>
@@ -117,6 +122,7 @@ export default function NewCard() {
                 style={{ color: "#1877f2" }}
                 className="fa-solid fa-address-card"
               ></i>
+
               <input
                 type="text"
                 value={data?.title}
@@ -129,6 +135,7 @@ export default function NewCard() {
               <i style={{ color: "#f6b828" }} className="fa-solid fa-link"></i>
               <input
                 type="text"
+                value={data?.url}
                 placeholder="url here ..."
                 name="url"
                 onChange={handleChange}
