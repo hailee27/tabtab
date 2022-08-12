@@ -62,7 +62,6 @@ export default function NewCard() {
   };
   const handleSelect = (title, thumbnail, url) => {
     setFile(() => "");
-
     setData((prev) => {
       return {
         ...prev,
@@ -72,7 +71,6 @@ export default function NewCard() {
       };
     });
   };
-  console.log(data);
 
   return (
     <div className={styles.edit}>

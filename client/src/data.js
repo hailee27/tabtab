@@ -2,21 +2,21 @@ const socials = [
   {
     id: 1,
     title: "FaceBook",
-    url: "fb.com/",
+    url: "https://fb.com/",
     thumbnail:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Facebook-icon-1.png/640px-Facebook-icon-1.png",
   },
   {
     id: 2,
     title: "TikTok",
-    url: "tiktik.com/",
+    url: "https://tiktok.com/",
     thumbnail:
       "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2022/3/3/1019896/Share_Img.png",
   },
   {
     id: 3,
     title: "Instagram",
-    url: "instagr.com/",
+    url: "https://instagram.com/",
     thumbnail:
       "https://play-lh.googleusercontent.com/h9jWMwqb-h9hjP4THqrJ50eIwPekjv7QPmTpA85gFQ10PjV02CoGAcYLLptqd19Sa1iJ",
   },

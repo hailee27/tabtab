@@ -6,15 +6,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { getCard, getProfile } from "@/redux/api";
 import { Backdrop, CircularProgress } from "@mui/material";
 
-import Error from "@/pages/Error";
-
 export default function Profile() {
   const location = useLocation();
   const dispatch = useDispatch();
-  const cards = useSelector((state) => state.card.currentCards);
-  const { profileCurrent, isFetching } = useSelector((state) => state.profile);
+  const { currentCards, isFetching } = useSelector((state) => state.card);
+  const profile = useSelector((state) => state.profile.profileCurrent);
   const username = location.pathname.split("/")[1];
-  const profile = profileCurrent;
+  const cards = currentCards;
 
   useEffect(() => {
     getCard(dispatch, username);
@@ -32,15 +30,16 @@ export default function Profile() {
                 : `url(${profile?.coverPicture})`,
           }}
         >
+          <Backdrop
+            sx={{
+              color: "#fff",
+              zIndex: (theme) => theme.zIndex.drawer + 1,
+            }}
+            open={isFetching}
+          >
+            <CircularProgress color="inherit" />
+          </Backdrop>
           <section className={styles.container}>
-            <Backdrop
-              sx={{
-                zIndex: (theme) => theme.zIndex.drawer + 1,
-              }}
-              open={isFetching}
-            >
-              <CircularProgress color="inherit" />
-            </Backdrop>
             <div className={styles.top}>
               <img
                 className={styles.avatar}
@@ -77,7 +76,6 @@ export default function Profile() {
           </section>
         </div>
       )}
-      {!profile && <Error />}
     </>
   );
 }

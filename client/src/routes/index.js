@@ -8,7 +8,6 @@ import Error from "@/pages/Error";
 
 import { AuthLayout } from "@/layout";
 
-// const Admin = lazy(() => import("../pages/Admin"));
 export const publishRoute = [
   { path: "/", component: Home },
   { path: "/login", component: Login, layout: AuthLayout },
